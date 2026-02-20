@@ -74,16 +74,86 @@ section { padding: 100px 0; width: 100%; position: relative; clear: both; }
 .v-list-item strong { display: block; color: var(--p); font-size: 17px; margin-bottom: 5px; font-weight: 800; }
 
 /* --- FOOTER --- */
-.footer { padding: 80px 0 0; background: #fff; border-top: 1px solid #eee; }
-.footer-grid { display: grid; grid-template-columns: 1fr 400px; gap: 80px; padding-bottom: 60px; align-items: start; }
-.footer-brand .logo { font-size: 32px; margin-bottom: 20px; }
-.social-links { display: flex; gap: 15px; margin-top: 30px; }
-.social-links a { width: 45px; height: 45px; border-radius: 50%; border: 1px solid #eee; display: flex; align-items: center; justify-content: center; color: var(--p); transition: 0.3s; }
-.social-links a:hover { background: var(--s); color: #fff; transform: translateY(-5px); }
-.footer-form h3 { margin-bottom: 25px; color: var(--p); font-weight: 800; }
-.footer-form input, .footer-form textarea { width: 100%; padding: 15px; margin-bottom: 15px; border: 1px solid #e2e8f0; border-radius: 10px; background: #f8fafc; outline: none; }
-.footer-bottom { border-top: 1px solid #eee; padding: 25px 0; text-align: center; color: #94a3b8; font-size: 14px; }
+/* --- FOOTER (LACİVERT TASARIM) --- */
+.footer { 
+    padding: 80px 0 0; 
+    background: var(--p); /* Burası artık o koyu mavi/lacivert rengimiz */
+    color: #fff; /* Genel metin rengini beyaz yaptık */
+    border-top: none; 
+}
 
+.footer-grid { 
+    display: grid; 
+    grid-template-columns: 1fr 400px; 
+    gap: 80px; 
+    padding-bottom: 60px; 
+    align-items: start; 
+}
+
+/* Logoyu arka planda görünecek şekilde güncelledik */
+.footer-brand .logo { 
+    color: #fff; 
+    font-size: 32px; 
+    margin-bottom: 20px; 
+}
+.footer-brand .logo span { 
+    color: var(--s); /* Kırmızı vurgu rengimiz kalsın */
+}
+
+.footer-brand p, .contact-box p { 
+    color: rgba(255, 255, 255, 0.8); /* Yazıları hafif şeffaf beyaz yaparak gözü yormamasını sağladık */
+}
+
+.contact-box strong { color: #fff; }
+
+.social-links { display: flex; gap: 15px; margin-top: 30px; }
+.social-links a { 
+    width: 45px; 
+    height: 45px; 
+    border-radius: 50%; 
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    color: #fff; 
+    transition: 0.3s; 
+}
+.social-links a:hover { 
+    background: var(--s); 
+    border-color: var(--s); 
+    transform: translateY(-5px); 
+}
+
+/* Form Alanı Düzenlemeleri */
+.footer-form h3 { 
+    margin-bottom: 25px; 
+    color: #fff; /* Başlık beyaz */
+    font-weight: 800; 
+}
+
+.footer-form input, .footer-form textarea { 
+    width: 100%; 
+    padding: 15px; 
+    margin-bottom: 15px; 
+    border: 1px solid rgba(255, 255, 255, 0.1); 
+    border-radius: 10px; 
+    background: rgba(255, 255, 255, 0.05); /* Input içlerini çok hafif transparan yaptık */
+    outline: none; 
+    color: #fff; 
+}
+
+.footer-form input::placeholder, .footer-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Alt Çizgi ve Telif Yazısı */
+.footer-bottom { 
+    border-top: 1px solid rgba(255, 255, 255, 0.1); 
+    padding: 25px 0; 
+    text-align: center; 
+    color: rgba(255, 255, 255, 0.5); 
+    font-size: 14px; 
+}
 /* --- BUTTONS --- */
 .btn-primary { background: var(--s); color: #fff; padding: 15px 32px; text-decoration: none; border-radius: 8px; font-weight: 700; display: inline-block; transition: 0.3s; border: none; cursor: pointer; }
 .btn-secondary { border: 2px solid #fff; color: #fff; padding: 13px 32px; text-decoration: none; border-radius: 8px; font-weight: 700; }
